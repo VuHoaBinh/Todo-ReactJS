@@ -85,3 +85,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 link doument: https://github.com/fkhadra/react-toastify
 
 
+### react-router-dom
+`npm install --save-exact react-router-dom@6.14.2`
+link: https://www.npmjs.com/package/react-router-dom
+
+
+## Npm axios
+` npm i axios `
