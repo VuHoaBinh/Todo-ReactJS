@@ -1,40 +1,58 @@
 import logo from "./logo.svg";
 import "./App.scss";
-// import Mycomponent from "./example/Mycomponents"
+import Mycomponent from "./example/Mycomponents";
 import ListToDo from "./Todo/ListToDo";
-import { ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import Nav from "./nav/Nav";
+import Home from "./example/Home";
+// react router library
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+// routes -> switch
+import ListUsers from "./Users/ListUsers";
+import DetailUser from "./Users/DetailUser";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Demo Todo app with ReactJS. By BTom</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ListToDo />
-        {/* <Mycomponent/> */}
-      </header>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Nav />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/todo">
+              <ListToDo />
+            </Route>
+            <Route path="/user" exact>
+              <ListUsers />
+            </Route>
+            <Route path="/user/:id">
+              <DetailUser />
+            </Route>
+            <Route path="/about">
+              <Mycomponent />
+            </Route>
+          </Switch>
+        </header>
+
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+      </div>
+    </BrowserRouter>
   );
 }
 
