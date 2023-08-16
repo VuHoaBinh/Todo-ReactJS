@@ -13,6 +13,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ListUsers from "./Users/ListUsers";
 import DetailUser from "./Users/DetailUser";
 
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,13 +23,13 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Switch>
-            <Route path="/" exact>
+            <Route path="/" exact="true">
               <Home />
             </Route>
             <Route path="/todo">
               <ListToDo />
             </Route>
-            <Route path="/user" exact>
+            <Route path="/user" exact="true">
               <ListUsers />
             </Route>
             <Route path="/user/:id">

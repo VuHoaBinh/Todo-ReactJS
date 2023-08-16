@@ -1,7 +1,9 @@
 import React from "react";
 // import { withRouter } from "react-router";
 import Color from "./HOC/Color";
-import logo from '../../assets/image/binh.jpg'
+import logo from "../../assets/image/binh.jpg";
+import { connect } from "react-redux";
+
 class Home extends React.Component {
   componentDidMount() {
     // setTimeout(() => {
@@ -10,9 +12,10 @@ class Home extends React.Component {
   }
 
   render() {
+    console.log("Pros......: ",this.props.dataRedux);
     return (
       <>
-        <img src={logo} alt="myphoto"/>
+        <img src={logo} alt="myphoto" />
         <p>Demo web with ReactJS. By BTom</p>
         <a
           className="App-link"
@@ -27,7 +30,9 @@ class Home extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return { dataRedux: state.users };
+};
+
 // export default withRouter(Home);
-export default Color(Home);
-
-
+export default connect(mapStateToProps)(Color(Home));
