@@ -92,3 +92,6 @@ link: https://www.npmjs.com/package/react-router-dom
 
 ## Npm axios
 ` npm i axios `
+
+## redux (dispatch)
+`https://react-redux.js.org/using-react-redux/connect-mapdispatch`

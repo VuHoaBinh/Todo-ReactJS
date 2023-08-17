@@ -8,13 +8,13 @@ class Nav extends React.Component {
       <div>
         <Router>
           <div className="topnav">
-            <a className="active" href="/" exact>
-                Home
-              </a>
-              <a href="/todo">Todos</a>
-              <a href="/user">Users</a>
+            <a className="active" href="/" exact={"true"}>
+              Home
+            </a>
+            <a href="/todo">Todos</a>
+            <a href="/user">Users</a>
 
-              <a href="/about">About</a>
+            <a href="/about">About</a>
             {/* <NavLink to="/" activeClassName="active" exact={true}>
               Home
             </NavLink>

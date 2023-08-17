@@ -1,23 +1,9 @@
 import React from "react";
 import Childcomponent from "./ChildComponents";
 import AddComponent from "./AddComponents";
+// import { connect } from "react-redux";
 
 class Mycomponent extends React.Component {
-  // state = {
-  //   firstName: "binh",
-  //   age: "20",
-  //   lastName: "dep trai",
-  // };
-
-  // handleOnChange = (event) => {
-  //   this.setState({
-  //     lastName: event.target.value,
-  //   });
-  // };
-  // handleOnClickButton = (event) =>{
-  //   alert("successfull")
-  // };
-
   state = {
     // firstfirstName :"",
     // lastfirstName :"",
